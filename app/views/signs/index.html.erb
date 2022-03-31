@@ -18,7 +18,7 @@
         <td><%= sign.mail %></td>
         <td><%= link_to 'Show', sign %></td>
         <td><%= link_to 'Edit', edit_sign_path(sign) %></td>
-        <td><%= link_to 'Destroy', sign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', sign_path(sign), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

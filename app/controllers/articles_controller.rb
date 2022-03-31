@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1 or /articles/1.json
   def show
-    
+
   end
 
   # GET /articles/new
@@ -23,6 +23,7 @@ class ArticlesController < ApplicationController
   # POST /articles or /articles.json
   def create
     @article = Article.new(article_params)
+  
 
     respond_to do |format|
       if @article.save
