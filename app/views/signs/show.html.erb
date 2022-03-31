@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @sign.username %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @sign.mail %>
+</p>
+
+<%= link_to 'Edit', edit_sign_path(@sign) %> |
+<%= link_to 'Back', signs_path %>
