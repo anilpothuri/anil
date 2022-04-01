@@ -18,6 +18,7 @@ class SignsController < ApplicationController
 
   # GET /signs/1/edit
   def edit
+
   end
 
   # POST /signs or /signs.json
@@ -39,7 +40,7 @@ class SignsController < ApplicationController
   def update
     respond_to do |format|
       if @sign.update(sign_params)
-        format.html { redirect_to sign_url(@sign), notice: "Sign was successfully updated." }
+        format.html { redirect_to sign_url(@sign), notice: "Informstion  was successfully updated." }
         format.json { render :show, status: :ok, location: @sign }
       else
         format.html { render :edit, status: :unprocessable_entity }

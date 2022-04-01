@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<h2 class="text-center"> <%= @sign.username%>'s profile</h2>
+<center><%= gravatar_for @sign%></center>
+<br></br>
 <p>
   <strong>Username:</strong>
   <%= @sign.username %>
