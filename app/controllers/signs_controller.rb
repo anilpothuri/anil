@@ -3,11 +3,13 @@ class SignsController < ApplicationController
 
   # GET /signs or /signs.json
   def index
-    @signs = Sign.all
+    @signs = Sign.paginate(page: params[:page], per_page: 5)
+
   end
 
   # GET /signs/1 or /signs/1.json
   def show
+    @signs=Sign.paginate(page: params[:page], per_page: 5)
   end
 
   # GET /signs/new

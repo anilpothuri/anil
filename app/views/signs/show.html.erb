@@ -2,6 +2,9 @@
 <h2 class="text-center"> <%= @sign.username%>'s profile</h2>
 <center><%= gravatar_for @sign%></center>
 <br></br>
+<div class="text-center mt-4">
+  <%= link_to "Edit your profile", edit_sign_path(@sign),class:"btn btn-outline-info" %>
+  </div>
 <p>
   <strong>Username:</strong>
   <%= @sign.username %>
