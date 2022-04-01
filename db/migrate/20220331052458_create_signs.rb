@@ -3,6 +3,7 @@ class CreateSigns < ActiveRecord::Migration[6.0]
     create_table :signs do |t|
       t.string :username
       t.text :mail
+      
 
       t.timestamps
     end

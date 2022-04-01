@@ -12,7 +12,7 @@ class SignsController < ApplicationController
 
   # GET /signs/new
   def new
-  
+
     @sign = Sign.new
   end
 
@@ -26,7 +26,7 @@ class SignsController < ApplicationController
 
     respond_to do |format|
       if @sign.save
-        format.html { redirect_to sign_url(@sign), notice: "Sign was successfully created." }
+        format.html { redirect_to sign_url(@sign), notice: " #{@sign.username} welcome to some app Sign was successfully created." }
         format.json { render :show, status: :created, location: @sign }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -66,6 +66,6 @@ class SignsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def sign_params
-      params.require(:sign).permit(:username, :mail)
+      params.require(:sign).permit(:username, :mail, :password, :password_confirmation)
     end
 end
