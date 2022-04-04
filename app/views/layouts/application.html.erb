@@ -39,9 +39,25 @@
                      <li><a class="dropdown-item" href="#">Something else here</a></li>
                    </ul>
                </div>
-                 <li class="nav-item">
-                   <a class="nav-link disabled">Disabled</a>
-                 </li>
+
+
+                 <%  if logged_in? %>
+
+                    
+                   <li class="nav-item">
+                  <%= link_to 'log out ' ,logout_path,class: "nav-link",method: :delete%>
+                  </li>
+                <% else %>
+                    <li class="nav-item">
+                    <%= link_to 'log in' ,login_path,class: "nav-link"%>
+                    </li>
+                    <li class="nav-item">
+                    <%= link_to 'sign up' ,signup_path,class: "nav-link"%>
+                    </li>
+
+
+                 <% end %>
+
                </ul>
                <form class="d-flex">
                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

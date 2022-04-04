@@ -6,4 +6,15 @@ module ApplicationHelper
        image_tag(gravatar_url, alt: sign.username)
 
   end
+
+  def current_sign
+    @current_sign ||= Sign.find(session[:sign_id]) if session[:sign_id]
+
+
+
+  end
+  def logged_in?
+    !!current_sign
+
+  end
 end

@@ -1,5 +1,6 @@
 class SignsController < ApplicationController
   before_action :set_sign, only: %i[ show edit update destroy ]
+  
 
   # GET /signs or /signs.json
   def index
@@ -71,4 +72,4 @@ class SignsController < ApplicationController
     def sign_params
       params.require(:sign).permit(:username, :mail, :password, :password_confirmation)
     end
-end
+    end
