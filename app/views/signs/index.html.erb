@@ -1,29 +1,53 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Signs</h1>
+<center>
+<div class="digg_pagination">
 
-<table>
+    <%= will_paginate @posts, :container => false %>
+  </div></center>
+
+<h1 class="text-center">Alpha Blog</h1>
+<center><table class="text-center">
   <thead>
     <tr>
-      <th>Username</th>
-      <th>Mail</th>
+      <th> </th>
+      <th><h4>Username</h4></th>
+      <th><h4>Mail</h4></th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
+
     <% @signs.each do |sign| %>
+
       <tr>
+         <td><%= link_to gravatar_for(sign) %></td>
         <td><%= sign.username %></td>
         <td><%= sign.mail %></td>
+
         <td><%= link_to 'Show', sign %></td>
         <td><%= link_to 'Edit', edit_sign_path(sign) %></td>
         <td><%= link_to 'Destroy', sign_path(sign), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td>   <small>Joined <%= time_ago_in_words(sign.created_at) %></small></td>
+
       </tr>
+
+
     <% end %>
-  </tbody>
-</table>
 
 <br>
 
-<%= link_to 'New Sign', new_sign_path %>
+  </tbody>
+
+</table></center>
+
+
+<br>
+
+    <center><h5><%= link_to 'New Sign', new_sign_path %></h5></center>
+
+  <center>  <div class="digg_pagination" border-width=30px>
+
+        <%= will_paginate @posts, :container => false %>
+      </div></center>
