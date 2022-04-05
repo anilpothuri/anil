@@ -43,7 +43,7 @@
 
                  <%  if logged_in? %>
 
-                    
+                    <%= "(Admin)" if current_sign.admin? %>
                    <li class="nav-item">
                   <%= link_to 'log out ' ,logout_path,class: "nav-link",method: :delete%>
                   </li>
