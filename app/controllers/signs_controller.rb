@@ -1,6 +1,6 @@
 class SignsController < ApplicationController
   before_action :set_sign, only: %i[ show edit update destroy ]
-  
+
 
   # GET /signs or /signs.json
   def index
