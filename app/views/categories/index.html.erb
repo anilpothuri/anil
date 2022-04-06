@@ -1,0 +1,28 @@
+<h1 class="text-center">Category</h1>
+
+<center>
+<div class="digg_pagination">
+
+    <%= will_paginate @categories, :container => false %>
+  </div></center>
+
+
+
+<table>
+<div class="container">
+  <% @categories.each do |category| %>
+
+<tr>
+    <td>  <%= category.name %></td>
+    <td>  <%= link_to 'Show', category %></td>
+    <td>  <%= link_to 'Edit', edit_category_path(category) %></td>
+    <td>  <%= link_to 'Destroy', category_path(category), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td> <small>Joined <%= time_ago_in_words(category.created_at) %></small></td>
+    <td> <small>Updated <%= time_ago_in_words(category.updated_at) %></small></td>
+
+ </tr>
+
+<%end%>
+</table>
+
+</div>
