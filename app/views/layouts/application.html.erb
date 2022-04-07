@@ -30,9 +30,9 @@
                  </li>
                  <div class="nav-item dropdown">
                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                     Dropdown
+                    dropdown
                    </a>
-                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <ul class="dropdown-menu" >
                      <li><a class="dropdown-item" href="#">Action</a></li>
                      <li><a class="dropdown-item" href="#">Another action</a></li>
                      <li><hr class="dropdown-divider"></li>
@@ -43,8 +43,10 @@
 
                  <%  if logged_in? %>
 
+
                     <%= "(Admin)" if current_sign.admin? %>
                    <li class="nav-item">
+
                   <%= link_to 'log out ' ,logout_path,class: "nav-link",method: :delete%>
                   </li>
                 <% else %>
